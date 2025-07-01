@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services — Magnus &amp; Co. Property Group</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .services-hero {
+            background: url('https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5a?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+            min-height: 320px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .services-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(11, 11, 11, 0.55);
+        }
+
+        .services-hero-content {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+            padding: 2.5rem 1rem;
+        }
+
+        .services-hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .services-hero-content p {
+            font-size: 1.2rem;
+            color: #e6e6e6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .service-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 3rem 0 2rem 0;
+        }
+
+        .service-card {
+            background: #f9f9f9;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            padding: 2rem 1.5rem;
+            max-width: 320px;
+            text-align: center;
+            flex: 1 1 220px;
+        }
+
+        .service-card img {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #0b0b0b;
+        }
+
+        .service-card p {
+            color: #8da9c4;
+            font-size: 1rem;
+        }
+
+        .how-works {
+            margin: 4rem 0 2rem 0;
+        }
+
+        .how-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .how-step {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            max-width: 220px;
+            flex: 1 1 160px;
+        }
+
+        .how-step img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+        }
+
+        .how-step h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .how-step p {
+            font-size: 0.95rem;
+            color: #8da9c4;
+        }
+
+        .services-cta {
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+        }
+
+        @media (max-width: 900px) {
+            .service-cards,
+            .how-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span>Magnus &amp; Co.®</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="services-hero">
+        <div class="services-hero-content">
+            <h1>Our Services</h1>
+            <p>Unlock your property's full potential with our fully managed short-term rental solutions for landlords and
+                apartment owners.</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section>
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80" alt="Property Management" />
+                    <h3>Property Management</h3>
+                    <p>We handle everything: guest screening, dynamic pricing, cleaning, and maintenance for worry-free
+                        income.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Landlord Solutions" />
+                    <h3>Landlord Solutions</h3>
+                    <p>Tailored for landlords—maximize rental income, minimize vacancy, and enjoy hands-off ownership.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Pilot Program" />
+                    <h3>60-Day Pilot Program</h3>
+                    <p>Try our services risk-free. No cost, no commitment. See results in just 60 days.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-works">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">How It Works</h2>
+            <div class="how-steps">
+                <div class="how-step">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=200&q=80" alt="Apply" />
+                    <h4>1. Apply</h4>
+                    <p>Book a quick call to evaluate your unit(s). If it’s a fit, we launch your pilot—no obligation.</p>
+                </div>
+                <div class="how-step">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=200&q=80" alt="Onboard" />
+                    <h4>2. Onboard</h4>
+                    <p>We set up pricing, SOPs, guest management, and support—fully managed.</p>
+                </div>
+                <div class="how-step">
+                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=200&q=80" alt="Review" />
+                    <h4>3. Review</h4>
+                    <p>See results in 60 days. If you’re satisfied, we scale. If not, no pressure.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="services-cta">
+            <h2 style="font-size:1.5rem; margin-bottom:1rem;">Ready to maximize your rental income?</h2>
+            <a href="contact.html" class="btn" style="max-width:260px;">Get Started Today</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Company</p>
+        <nav>
+            <a href="about.html">About Us</a>
+            <a href="landlords.html">Landlord Solutions</a>
+            <a href="services.html">Property Management</a>
+            <a href="pilot.html">Pilot Program</a>
+            <a href="contact.html">Contact Form</a>
+        </nav>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook">F</a>
+            <a href="#" aria-label="Twitter">T</a>
+            <a href="#" aria-label="LinkedIn">L</a>
+        </div>
+    </footer>
+</body>
+
+</html>
