@@ -7,6 +7,115 @@
     <title>Magnus &amp; Co. Property Group - Home</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+        
+        :root {
+            --color-primary-gold: #C09D68;
+            --color-primary-black: #0B0B0B;
+            --color-primary-white: #FFFFFF;
+            --color-secondary-steelblue: #8DA9C4;
+            --color-secondary-warmtaupe: #A89F91;
+        }
+
+        body {
+            background: var(--color-primary-white);
+            color: var(--color-primary-black);
+        }
+
+        .btn {
+            background: var(--color-primary-gold);
+            color: var(--color-primary-black);
+            border: none;
+            border-radius: 10px;
+            padding: 1rem 2.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn:hover,
+        .btn:focus {
+            background: var(--color-secondary-steelblue);
+            color: var(--color-primary-white);
+            transform: scale(1.06);
+        }
+
+        /* Animation classes */
+        .animate-fadein {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .animate-fadein.animated {
+            opacity: 1;
+        }
+
+        .animate-fadein-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .animate-fadein-up.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-slidein-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .animate-slidein-left.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .animate-slidein-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .animate-slidein-right.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .animate-pop {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.7s, transform 0.7s;
+        }
+
+        .animate-pop.animated {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .animate-zoom {
+            opacity: 0;
+            transform: scale(1.12);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .animate-zoom.animated {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .animate-slidein-down {
+            opacity: 0;
+            transform: translateY(-40px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .animate-slidein-down.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
         /* Slider styles */
         .slider-container {
             width: 100vw;
@@ -180,20 +289,20 @@
                 padding: 1.2rem 0.5rem;
             }
         }
+
     </style>
 </head>
 
 <body>
     <header>
         <nav class="container">
-            <div class="logo">
-                <!-- <img src="https://via.placeholder.com/40x40?text=M" alt="Magnus & Co. Logo" /> -->
+            <div class="logo animate-fadein">
                 <span>Magnus &amp; Co.®</span>
             </div>
-            <ul>
+            <ul class="animate-slidein-down">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="Landlords.html">Landlords</a></li>
+                <li><a href="Multi-Family.html">Multi-Family</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -202,33 +311,33 @@
     <main>
         <!-- Slider -->
         <div class="slider-container">
-            <div class="slider-slide active"
-                style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');">
-                <div class="slider-content">
+            <div class="slider-slide active animate-zoom"
+                 style="background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1470&q=80');">
+                <div class="slider-content animate-fadein-up">
                     <h1>Professional Stays &amp; Consistent Returns</h1>
                     <p>Partner with Magnus &amp; Co. for fully managed short-term rentals.</p>
-                    <button class="btn" onclick="document.location='contact.html'">Start Your 60-Day Pilot</button>
+                    <button class="btn animate-pop" onclick="document.location='contact.html'">Start Your 60-Day Pilot
+                    </button>
                 </div>
             </div>
-            <div class="slider-slide"
-                style="background-image:url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80');">
-                <div class="slider-content">
+            <div class="slider-slide animate-zoom"
+                 style="background-image: url('https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5a?auto=format&fit=crop&w=1470&q=80');">
+                <div class="slider-content animate-fadein-up">
                     <h1>See Results in 60 Days</h1>
                     <p>No cost, no commitment. Let the numbers speak for themselves.</p>
-                    <button class="btn" onclick="document.location='contact.html'">Book a Call</button>
+                    <button class="btn animate-pop" onclick="document.location='contact.html'">Book a Call</button>
                 </div>
             </div>
             <div class="slider-controls">
-                <button class="slider-btn" id="slider-prev">&#8592;</button>
-                <button class="slider-btn" id="slider-next">&#8594;</button>
+                <button class="slider-btn animate-pop" id="slider-prev">&#8592;</button>
+                <button class="slider-btn animate-pop" id="slider-next">&#8594;</button>
             </div>
         </div>
-     <!-- Solutions Section -->
+        <!-- Solutions Section -->
         <section style="background: none; padding: 2rem 0 4rem 0;">
             <div class="grid-2x2">
-                <div>
-
-                    <div class="img-block">
+                <div class="animate-slidein-left">
+                    <div class="img-block animate-zoom">
                         <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
                         alt="Landlords" />
                     </div>
@@ -236,67 +345,63 @@
                         <h3>For Landlords</h3>
                         <p>Earn more from your rental—without lifting a finger. We handle everything from guest screening to
                             dynamic pricing.</p>
-                        </div>
                     </div>
-                    <div>
-                        
-                        <div class="img-block">
-                            <img src="https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5a?auto=format&fit=crop&w=400&q=80"
-                            alt="Apartment Owners" />
-                        </div>
-                        <div class="solution-text" style="text-align:left;">
-                            <h3>For Apartment Owners</h3>
-                            <p>Turn vacant units into revenue with zero disruption. Seamlessly integrated with your onsite
-                                operations.</p>
-                            </div>
+                </div>
+                <div class="animate-slidein-right">
+                    <div class="img-block animate-zoom">
+                        <img src="https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5a?auto=format&fit=crop&w=400&q=80"
+                        alt="Apartment Owners" />
+                    </div>
+                    <div class="solution-text" style="text-align:left;">
+                        <h3>For Apartment Owners</h3>
+                        <p>Turn vacant units into revenue with zero disruption. Seamlessly integrated with your onsite
+                            operations.</p>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Steps Section -->
         <section style="background: none; padding: 0 0 4rem 0;">
             <div class="grid-2x2">
-                <div class="step-text" style="text-align:left;">
+                <div class="step-text animate-slidein-left" style="text-align:left;">
                     <h3>Step 1: Apply</h3>
                     <p>Book a quick call to evaluate your unit(s). If it’s a fit, we launch your pilot—no obligation.</p>
                 </div>
-                <div class="img-block">
+                <div class="img-block animate-zoom">
                     <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80"
                         alt="Apply" />
                 </div>
-                <div class="img-block">
+                <div class="img-block animate-zoom">
                     <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=400&q=80"
                         alt="Onboard" />
                 </div>
-                <div class="step-text" style="text-align:left;">
+                <div class="step-text animate-slidein-right" style="text-align:left;">
                     <h3>Step 2: Onboard</h3>
                     <p>We set up pricing, SOPs, guest management, and support—fully managed.</p>
                 </div>
-                <div class="step-text" style="text-align:left;">
+                <div class="step-text animate-slidein-left" style="text-align:left;">
                     <h3>Step 3: Review</h3>
                     <p>See results in 60 days. If you’re satisfied, we scale. If not, no pressure.</p>
                 </div>
-                <div class="img-block">
+                <div class="img-block animate-zoom">
                     <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80"
                         alt="Review" />
                 </div>
             </div>
         </section>
-
-   
-
         <!-- CTA Section -->
-        <section>
+        <section class="animate-fadein-up">
             <h2>Partner with Magnus &amp; Co.</h2>
             <p style="text-align:center; max-width:600px; margin: 0 auto 2rem;">
                 Join our 60-day pilot—no cost, no commitment. Let the numbers speak.
             </p>
             <div style="text-align:center;">
-                <button class="btn" onclick="document.location='contact.html'">Book a Call</button>
+                <button class="btn animate-pop" onclick="document.location='contact.html'">Book a Call</button>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="animate-fadein">
         <p>Company</p>
         <nav>
             <a href="about.html">About Us</a>
@@ -315,18 +420,68 @@
         // Simple slider logic
         const slides = document.querySelectorAll('.slider-slide');
         let current = 0;
+        let sliderInterval = null;
 
         function showSlide(idx) {
-            slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === idx);
+                // Animate content on slide change
+                if (i === idx) {
+                    // Remove and re-add animation classes for content
+                    const content = s.querySelector('.slider-content');
+                    if (content) {
+                        content.classList.remove('animated');
+                        // Force reflow to restart animation
+                        void content.offsetWidth;
+                        content.classList.add('animated');
+                    }
+                }
+            });
         }
-        document.getElementById('slider-prev').onclick = function () {
-            current = (current - 1 + slides.length) % slides.length;
-            showSlide(current);
-        };
-        document.getElementById('slider-next').onclick = function () {
+
+        function nextSlide() {
             current = (current + 1) % slides.length;
             showSlide(current);
+        }
+
+        function prevSlide() {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        }
+
+        document.getElementById('slider-prev').onclick = function () {
+            prevSlide();
+            resetSliderInterval();
         };
+        document.getElementById('slider-next').onclick = function () {
+            nextSlide();
+            resetSliderInterval();
+        };
+
+        function startSliderInterval() {
+            sliderInterval = setInterval(nextSlide, 6000);
+        }
+        function resetSliderInterval() {
+            clearInterval(sliderInterval);
+            startSliderInterval();
+        }
+
+        // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-fadein, .animate-fadein-up, .animate-slidein-left, .animate-slidein-right, .animate-pop, .animate-zoom, .animate-slidein-down');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 60) {
+                    el.classList.add('animated');
+                }
+            });
+        }
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('DOMContentLoaded', () => {
+            animateOnScroll();
+            showSlide(current);
+            startSliderInterval();
+        });
     </script>
 </body>
 

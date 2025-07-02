@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multifamily — Magnus &amp; Co. Property Group</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .services-hero {
+            background: url('https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5a?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+            min-height: 320px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .services-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(11,11,11,0.55);
+        }
+        .services-hero-content {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+            padding: 2.5rem 1rem;
+        }
+        .services-hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .services-hero-content p {
+            font-size: 1.2rem;
+            color: #e6e6e6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section-list {
+            margin: 2rem 0 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .section-list ul {
+            background: #f9f9f9;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 1.5rem 2rem;
+            min-width: 260px;
+            max-width: 350px;
+            font-size: 1.08rem;
+        }
+        .section-list ul li {
+            margin-bottom: 0.7rem;
+            color: #8DA9C4;
+            font-size: 1.08rem;
+            list-style: disc inside;
+        }
+        .results-list {
+            margin: 2rem 0 2rem 0;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 2rem 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .results-list ul {
+            margin-left: 1.5rem;
+        }
+        .results-list ul li {
+            margin-bottom: 0.7rem;
+            color: #8DA9C4;
+            font-size: 1.08rem;
+            list-style: disc inside;
+        }
+        .pilot-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2.5rem 0 2rem 0;
+        }
+        .pilot-step {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            max-width: 260px;
+            flex: 1 1 180px;
+        }
+        .pilot-step h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .pilot-step p {
+            font-size: 0.98rem;
+            color: #8DA9C4;
+        }
+        .cta-section {
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+        }
+        .cta-section .btn {
+            max-width: 260px;
+        }
+        @media (max-width: 900px) {
+            .section-list, .pilot-steps { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span>Magnus &amp; Co.®</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="landlords.html">Landlords</a></li>
+                <li><a href="Multi-Family.html" class="active">Multi-Family</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="services-hero">
+        <div class="services-hero-content">
+            <h1>Unlock NOI from Your Vacant Units</h1>
+            <p>Premium STR integration that respects your asset, elevates your operations, and increases revenue—with no disruption.</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section style="margin-top:2.5rem;">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">Multifamily STR, Done Right</h2>
+            <p style="text-align:center; max-width:700px; margin:0 auto 2rem auto;">
+                Magnus &amp; Co. partners with multifamily owners and operators to turn idle units into fully managed short-term rentals.<br>
+                We don’t lease units—we integrate into your workflow with a system that protects your asset, supports your team, and drives NOI.
+            </p>
+        </section>
+
+        <section>
+            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1.2rem;">Why Owners Work With Us</h2>
+            <div class="section-list">
+                <ul>
+                    <li>Increase NOI within 60 days using idle units</li>
+                    <li>No displacement, no disruption to tenants</li>
+                    <li>Professionally screened guests, insured stays</li>
+                    <li>24/7 guest support and resolution team</li>
+                    <li>Syncs with maintenance and leasing teams</li>
+                    <li>Live dashboards and full transparency</li>
+                    <li>Works with Class A, B, and C assets</li>
+                </ul>
+                <ul>
+                    <h3 style="font-size:1.1rem; color:#0B0B0B; margin-bottom:0.7rem;">How We Fit Into Your Ops</h3>
+                    <li>We coordinate with ownership, not just leasing</li>
+                    <li>Clean integration with existing SOPs</li>
+                    <li>Guest experience, tech stack, and enforcement fully handled</li>
+                    <li>Optional white-label or asset-lite model</li>
+                    <li>Scale only if the numbers justify it</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1.2rem;">Proven Results in Multifamily STR Performance</h2>
+            <div class="results-list">
+                <ul>
+                    <li>20–35% NOI uplift per unit compared to long-term leases</li>
+                    <li>80–90% average occupancy across stabilized STR units</li>
+                    <li>100% guest compliance via automated rules and in-stay monitoring</li>
+                    <li>Pre-staged units go live within 24–48 hours of vacancy, fully activated with guest protocols and pricing engine</li>
+                    <li>0 onsite disruption reported across all managed properties</li>
+                    <li>&lt;2% incident rate across hundreds of stays—fully insured and resolved in-house</li>
+                </ul>
+                <p style="margin-top:1rem; color:#8DA9C4;">
+                    All metrics are tracked, summarized, and reported directly to your asset or operations team during the pilot.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1.2rem;">Our 60-Day Pilot Program</h2>
+            <div class="pilot-steps">
+                <div class="pilot-step">
+                    <h4>Step 1 – Strategic Unit Selection</h4>
+                    <p>We align with ownership to select units that make operational and financial sense.</p>
+                </div>
+                <div class="pilot-step">
+                    <h4>Step 2 – Full-Service Launch</h4>
+                    <p>We onboard within 15 days: listings, pricing, SOPs, guest support, cleaning, and tech.</p>
+                </div>
+                <div class="pilot-step">
+                    <h4>Step 3 – Review Results</h4>
+                    <p>You receive clear, scheduled financial reports covering revenue, occupancy, fees, and net payouts—delivered in a format your asset management team can act on. If the pilot performs, we scale. If not, you walk away—no obligation.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2 style="font-size:1.3rem; margin-bottom:1rem;">Let's Talk Potential</h2>
+            <a href="contact.html" class="btn">See What Your Underused Space Could Earn</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Company</p>
+        <nav>
+            <a href="about.html">About Us</a>
+            <a href="landlords.html">Landlord Solutions</a>
+            <a href="services.html">Multifamily</a>
+            <a href="pilot.html">Pilot Program</a>
+            <a href="contact.html">Contact Form</a>
+        </nav>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook">F</a>
+            <a href="#" aria-label="Twitter">T</a>
+            <a href

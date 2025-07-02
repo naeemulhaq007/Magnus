@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landlords — Magnus &amp; Co. Property Group</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .landlord-hero {
+            background: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+            min-height: 320px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .landlord-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(11,11,11,0.55);
+        }
+        .landlord-hero-content {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+            padding: 2.5rem 1rem;
+        }
+        .landlord-hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .landlord-hero-content p {
+            font-size: 1.2rem;
+            color: #e6e6e6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section-list {
+            margin: 2rem 0 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .section-list ul {
+            background: #f9f9f9;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 1.5rem 2rem;
+            min-width: 260px;
+            max-width: 350px;
+            font-size: 1.08rem;
+        }
+        .section-list ul li {
+            margin-bottom: 0.7rem;
+            color: #8DA9C4;
+            font-size: 1.08rem;
+            list-style: disc inside;
+        }
+        .pilot-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2.5rem 0 2rem 0;
+        }
+        .pilot-step {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            max-width: 240px;
+            flex: 1 1 160px;
+        }
+        .pilot-step h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .pilot-step p {
+            font-size: 0.98rem;
+            color: #8DA9C4;
+        }
+        .cta-section {
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+        }
+        .cta-section .btn {
+            max-width: 260px;
+        }
+        @media (max-width: 900px) {
+            .section-list, .pilot-steps { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span>Magnus &amp; Co.®</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="landlords.html" class="active">Landlords</a></li>
+                <li><a href="Multi-Family.html">Multi-Family</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="landlord-hero">
+        <div class="landlord-hero-content">
+            <h1>Earn More. Do Less.</h1>
+            <p>We turn your rental into a high-performing short-term property—without adding work to your plate.</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section style="margin-top:2.5rem;">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">A Better Way for Landlords</h2>
+            <p style="text-align:center; max-width:700px; margin:0 auto 2rem auto;">
+                Magnus &amp; Co. partners with experienced landlords who want better returns without tenant management. Whether you’re managing a single property or multiple doors, we offer a fully managed short-term rental solution—from pricing optimization to 24/7 guest support—so you earn more while staying hands-off.
+            </p>
+        </section>
+
+        <section>
+            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1.2rem;">Why Landlords Choose Us</h2>
+            <div class="section-list">
+                <ul>
+                    <li>Higher NOI than traditional leases</li>
+                    <li>No long-term tenants or turnover issues</li>
+                    <li>Professional guests screened and monitored</li>
+                    <li>Dynamic pricing, automation &amp; revenue tools</li>
+                    <li>Cleaning, communication, and setup fully handled</li>
+                </ul>
+                <ul>
+                    <h3 style="font-size:1.1rem; color:#0B0B0B; margin-bottom:0.7rem;">Who This Is For</h3>
+                    <li>Have vacant or underperforming properties</li>
+                    <li>Want higher returns without managing day-to-day details</li>
+                    <li>Prefer working with a selective, systems-driven partner</li>
+                    <li>Care about preserving the long-term health of their asset</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1.2rem;">Our 60-Day Pilot Program</h2>
+            <div class="pilot-steps">
+                <div class="pilot-step">
+                    <h4>Step 1 – Schedule a Fit Call</h4>
+                    <p>We evaluate your unit’s potential and STR viability.</p>
+                </div>
+                <div class="pilot-step">
+                    <h4>Step 2 – We Launch Everything</h4>
+                    <p>From listings and tech to guest SOPs and pricing engines.</p>
+                </div>
+                <div class="pilot-step">
+                    <h4>Step 3 – Monitor Performance</h4>
+                    <p>At day 60, review your returns and decide whether to scale or walk away—no strings.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2 style="font-size:1.3rem; margin-bottom:1rem;">Ready to See What Your Property Can Earn?</h2>
+            <a href="contact.html" class="btn">Apply for our 60-day pilot program</a>
+            <p style="margin-top:0.7rem; color:#8DA9C4;">No cost. No long-term contracts. Just results.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Company</p>
+        <nav>
+            <!-- <a href="about.html">About Us</a> -->
+            <a href="Landlords.html">Landlord Solutions</a>
+            <a href="Multi-Family.html">Property Management</a>
+            <a href="pilot.html">Pilot Program</a>
+            <a href="contact.html">Contact Form</a>
+        </nav>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook">F</a>
+            <a href="#" aria-label="Twitter">T</a>
+            <a href="#" aria-label="LinkedIn">L</a>
+        </div>
+    </footer>
