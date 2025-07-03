@@ -102,28 +102,27 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">
+            <div class="logo animate-fadein">
                 <span>Magnus &amp; Co.®</span>
             </div>
-            <ul>
+            <ul class="animate-slidein-down">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="landlords.html" class="active">Landlords</a></li>
                 <li><a href="Multi-Family.html">Multi-Family</a></li>
-                <!-- <li><a href="about.html">About</a></li> -->
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="landlord-hero">
-        <div class="landlord-hero-content">
+        <div class="landlord-hero-content animate-fadein-up">
             <h1>Earn More. Do Less.</h1>
             <p>We turn your rental into a high-performing short-term property—without adding work to your plate.</p>
         </div>
     </div>
 
     <main class="container">
-        <section style="margin-top:2.5rem;">
+        <section style="margin-top:2.5rem;" class="animate-fadein-up">
             <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">A Better Way for Landlords</h2>
             <p style="text-align:center; max-width:700px; margin:0 auto 2rem auto;">
                 Magnus &amp; Co. partners with experienced landlords who want better returns without tenant management. Whether you’re managing a single property or multiple doors, we offer a fully managed short-term rental solution—from pricing optimization to 24/7 guest support—so you earn more while staying hands-off.
@@ -131,16 +130,16 @@
         </section>
 
         <section>
-            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1.2rem;">Why Landlords Choose Us</h2>
+            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1.2rem;" class="animate-slidein-down">Why Landlords Choose Us</h2>
             <div class="section-list">
-                <ul>
+                <ul class="animate-slidein-left">
                     <li>Higher NOI than traditional leases</li>
                     <li>No long-term tenants or turnover issues</li>
                     <li>Professional guests screened and monitored</li>
                     <li>Dynamic pricing, automation &amp; revenue tools</li>
                     <li>Cleaning, communication, and setup fully handled</li>
                 </ul>
-                <ul>
+                <ul class="animate-slidein-right">
                     <h3 style="font-size:1.1rem; color:#0B0B0B; margin-bottom:0.7rem;">Who This Is For</h3>
                     <li>Have vacant or underperforming properties</li>
                     <li>Want higher returns without managing day-to-day details</li>
@@ -151,17 +150,17 @@
         </section>
 
         <section>
-            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1.2rem;">Our 60-Day Pilot Program</h2>
+            <h2 style="text-align:center; font-size:1.5rem; margin-bottom:1.2rem;" class="animate-slidein-down">Our 60-Day Pilot Program</h2>
             <div class="pilot-steps">
-                <div class="pilot-step">
+                <div class="pilot-step animate-slidein-left">
                     <h4>Step 1 – Schedule a Fit Call</h4>
                     <p>We evaluate your unit’s potential and STR viability.</p>
                 </div>
-                <div class="pilot-step">
+                <div class="pilot-step animate-fadein-up">
                     <h4>Step 2 – We Launch Everything</h4>
                     <p>From listings and tech to guest SOPs and pricing engines.</p>
                 </div>
-                <div class="pilot-step">
+                <div class="pilot-step animate-slidein-right">
                     <h4>Step 3 – Monitor Performance</h4>
                     <p>At day 60, review your returns and decide whether to scale or walk away—no strings.</p>
                 </div>
@@ -169,24 +168,43 @@
         </section>
 
         <div class="cta-section">
-            <h2 style="font-size:1.3rem; margin-bottom:1rem;">Ready to See What Your Property Can Earn?</h2>
-            <a href="contact.html" class="btn">Apply for our 60-day pilot program</a>
-            <p style="margin-top:0.7rem; color:#8DA9C4;">No cost. No long-term contracts. Just results.</p>
+            <h2 style="font-size:1.3rem; margin-bottom:1rem;" class="animate-slidein-down">Ready to See What Your Property Can Earn?</h2>
+            <a href="contact.html" class="btn animate-fadein-up" >Apply for our 60-day pilot program</a>
+            <p style="margin-top:0.7rem; color:#8DA9C4;" class="animate-fadein-up">No cost. No long-term contracts. Just results.</p>
         </div>
     </main>
 
     <footer>
         <p>Company</p>
         <nav>
-            <!-- <a href="about.html">About Us</a> -->
             <a href="Landlords.html">Landlord Solutions</a>
             <a href="Multi-Family.html">Property Management</a>
             <a href="pilot.html">Pilot Program</a>
             <a href="contact.html">Contact Form</a>
         </nav>
-        <div class="social-icons">
+        <!-- <div class="social-icons">
             <a href="#" aria-label="Facebook">F</a>
             <a href="#" aria-label="Twitter">T</a>
             <a href="#" aria-label="LinkedIn">L</a>
-        </div>
+        </div> -->
     </footer>
+    <script>
+         // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-fadein, .animate-fadein-up, .animate-slidein-left, .animate-slidein-right, .animate-pop, .animate-zoom, .animate-slidein-down');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 60) {
+                    el.classList.add('animated');
+                }
+            });
+        }
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('DOMContentLoaded', () => {
+            animateOnScroll();
+            showSlide(current);
+            startSliderInterval();
+        });
+    </script>
+    </body>
+    </html>

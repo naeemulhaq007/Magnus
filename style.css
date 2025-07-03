@@ -438,3 +438,79 @@ footer nav a:hover {
         gap: 1rem;
     }
 }
+
+/* Animation classes */
+.animate-fadein {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.animate-fadein.animated {
+    opacity: 1;
+}
+
+.animate-fadein-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-fadein-up.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-slidein-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-slidein-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-slidein-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-slidein-right.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-pop {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.7s, transform 0.7s;
+}
+
+.animate-pop.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.animate-zoom {
+    opacity: 0;
+    transform: scale(1.12);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-zoom.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.animate-slidein-down {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-slidein-down.animated {
+    opacity: 1;
+    transform: translateY(0);
+}

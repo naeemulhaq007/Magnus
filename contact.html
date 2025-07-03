@@ -11,10 +11,10 @@
 <body>
     <header>
         <nav class="container">
-             <div class="logo">
+             <div class="logo animate-fadein">
                 <span>Magnus &amp; Co.®</span>
             </div>
-            <ul>
+            <ul class="animate-slidein-down">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Landlords.html">Landlords</a></li>
                 <li><a href="Multi-Family.html">Multi-Family</a></li>
@@ -24,10 +24,22 @@
     </header>
 
     <main class="container contact-page">
-        <h1>See What Your Property Could Do with the Right Operating Partner</h1>
-        <h2>We work with landlords and multifamily teams looking to increase NOI through fully managed short-term rentals. If you’re exploring options, submit your info below and our team will follow up within one business day.</h2>
+        <div class="map-container animate-zoom" style="width:100%;height:400px;margin-bottom:2rem;margin-top:2rem;">
+            <iframe
+            src="https://www.google.com/maps?q=9139+Wallisville+Rd,+Houston,+Texas,+77029&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Magnus &amp; Co. Location"
+            ></iframe>
+        </div>
+        <h1 class="animate-fadein-up">See What Your Property Could Do with the Right Operating Partner</h1>
+        <h2 class="animate-slidein-down">We work with landlords and multifamily teams looking to increase NOI through fully managed short-term rentals. If you’re exploring options, submit your info below and our team will follow up within one business day.</h2>
 
-        <section class="inquiry-form">
+        <section class="inquiry-form animate-slidein-right">
             <h2>Inquiry Form</h2>
             <p>Share your details and we’ll reach out to schedule a brief consultation.</p>
             <form>
@@ -49,27 +61,44 @@
             </form>
         </section>
 
-        <section class="contact-direct">
+        <section class="contact-direct animate-fadein-up">
             <h2>Prefer to reach out directly?</h2>
+            <p>📞 (832)-340-5243</p>
             <p>📩 <a href="mailto:abbas@magnus-property.com">abbas@magnus-property.com</a></p>
+            <p>📍 9139 Wallisville Rd, Houston, Texas, 77029</p>
         </section>
     </main>
 
     <footer>
         <p>Company</p>
         <nav>
-            <a href="about.html">About Us</a>
             <a href="landlords.html">Landlord Solutions</a>
             <a href="services.html">Property Management</a>
             <a href="pilot.html">Pilot Program</a>
             <a href="contact.html">Contact Form</a>
         </nav>
-        <div class="social-icons">
+        <!-- <div class="social-icons">
             <a href="#" aria-label="Facebook">F</a>
             <a href="#" aria-label="Twitter">T</a>
             <a href="#" aria-label="LinkedIn">L</a>
-        </div>
+        </div> -->
     </footer>
+    <script>
+        // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-fadein, .animate-fadein-up, .animate-slidein-left, .animate-slidein-right, .animate-pop, .animate-zoom, .animate-slidein-down');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 60) {
+                    el.classList.add('animated');
+                }
+            });
+        }
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('DOMContentLoaded', () => {
+            animateOnScroll();
+        });
+    </script>
 </body>
 
 </html>
