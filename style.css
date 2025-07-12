@@ -35,8 +35,8 @@ a:hover {
 
 /* Container */
 .container {
-    width: 90%;
-    max-width: 1200px;
+    /* width: 90%; */
+    /* max-width: 1200px; */
     margin: 0 auto;
 }
 
@@ -443,6 +443,80 @@ footer nav a:hover {
 .animate-fadein {
     opacity: 0;
     transition: opacity 1s;
+}
+
+/* Background image with dark overlay */
+.bg-photo-overlay {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.bg-photo-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 11, 11, 0.6);
+    z-index: 0;
+}
+
+.bg-photo-overlay > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Reduce section padding for tighter layout */
+.section-tight {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Transparent background for forms and content */
+.transparent-bg {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+}
+
+/* Adjust form input backgrounds for transparency */
+.transparent-bg input,
+.transparent-bg textarea {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.transparent-bg input::placeholder,
+.transparent-bg textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Adjust button colors for contrast */
+.transparent-bg .btn {
+    background-color: var(--color-primary-gold) !important;
+    color: var(--color-primary-black) !important;
+    box-shadow: none !important;
+}
+
+.transparent-bg .btn:hover {
+    background-color: var(--color-primary-white) !important;
+    color: var(--color-primary-black) !important;
+}
+
+/* Contact direct section text color adjustment */
+.contact-direct.transparent-bg p,
+.contact-direct.transparent-bg a {
+    color: #fff !important;
+}
+
+/* Adjust margins for map container */
+.map-container.tight-margin {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .animate-fadein.animated {
